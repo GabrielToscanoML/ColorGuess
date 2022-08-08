@@ -3,7 +3,10 @@ function createBalls() {
   for (let index = 0; index < 6; index += 1) {
     const balls = document.createElement('div');
     balls.addEventListener('click', () => {
-      verifyColor(getBalls[index].style.backgroundColor);
+      if(verifyColor(getBalls[index].style.backgroundColor)){
+        count += 3;
+        const placar = document.getElementById('score').textContent = 'Placar: ' + count;
+      }
     });
     balls.className = 'ball';
     // balls.addEventListener('click', verifyColor(balls.style.backgroundColor));
@@ -45,9 +48,12 @@ let colorGuess = getBalls[getRandomArbitrary()].style.backgroundColor;
 const getParagrafo = document.getElementById('rgb-color');
 getParagrafo.textContent = colorGuess;
 
+let count = 0;
+
 function verifyColor(cor) {
   if (cor === getParagrafo.textContent) {
     document.getElementById('answer').textContent = 'Acertou!';
+    return true;
   } else {
     document.getElementById('answer').textContent = 'Errou! Tente novamente!';
   }
