@@ -51,3 +51,10 @@ p {
 body {
   margin: 0px;
 }
+
+/* depois vou mexer nessa responsividade */
+/* @media screen and (max-width: 768px) {
+  #balls-section  {
+    flex-wrap: wrap;
+  }
+} */
