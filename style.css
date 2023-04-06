@@ -1,4 +1,4 @@
-div {
+span {
   display: inline-flex;
   margin-left: 30px;
   width: 70px;
@@ -7,16 +7,24 @@ div {
   border: 2px solid black;
 }
 
+span:hover, button:hover {
+  cursor: pointer;
+}
+
 #ball {
   margin-left: 20px;
 }
 
 #reset-game {
-  width: 100px;
+  width: 250px;
+  height: 80px;
+  font-size: 25px;
   background-color: aquamarine;
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  border-radius: 12px;
+  align-items: center;
 }
 
 #balls-section {

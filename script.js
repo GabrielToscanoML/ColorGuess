@@ -1,15 +1,15 @@
 const createBall = document.getElementById('balls-section');
 function createBalls() {
   for (let index = 0; index < 6; index += 1) {
-    const balls = document.createElement('div');
+    const balls = document.createElement('span');
     balls.addEventListener('click', () => {
       if(verifyColor(getBalls[index].style.backgroundColor)){
         count += 3;
-        const placar = document.getElementById('score').textContent = 'Placar: ' + count;
+        document.getElementById('score').textContent = 'Placar: ' + count;
       }
+      resetColors();
     });
     balls.className = 'ball';
-    // balls.addEventListener('click', verifyColor(balls.style.backgroundColor));
     createBall.appendChild(balls).lastChild;
   }
 }
@@ -28,7 +28,7 @@ function randomColor3() {
   return Math.round(Math.random() * 255);
 }
 
-const getBalls = document.querySelectorAll('div');
+const getBalls = document.querySelectorAll('span');
 function backgroundColorBalls() {
   for (let index = 0; index < 6; index += 1) {
     getBalls[index].style.backgroundColor =
@@ -59,12 +59,21 @@ function verifyColor(cor) {
   }
 }
 
-const btnReset = document.getElementById('reset-game');
-btnReset.addEventListener('click', resetGame);
+function resetPlacar() {
+  count = 0;
+  document.getElementById('score').textContent = 'Placar: ' + count;
+}
 
-function resetGame() {
-  document.getElementById('answer').textContent = 'Escolha uma cor';
+function resetColors() {
   backgroundColorBalls();
   colorGuess = getBalls[getRandomArbitrary()].style.backgroundColor;
   getParagrafo.textContent = colorGuess;
 }
+
+function resetAll () {
+  resetPlacar();
+  resetColors();
+}
+
+const btnReset = document.getElementById('reset-game');
+btnReset.addEventListener('click', resetAll);
