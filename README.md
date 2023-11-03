@@ -1,7 +1,8 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre o Projeto
 
-![image](https://github.com/GabrielToscanoML/PixelsArt/assets/68169956/2162f159-17f7-40f1-9f4c-fb7360f31f92)
+![image](https://github.com/GabrielToscanoML/ColorGuess/assets/68169956/ebbe84f3-60e7-4457-8ce0-cc24e9bc8479)
+
 
 ### Desenvolvimento
 
@@ -22,11 +23,11 @@ Para este projeto, uma forma de executá-lo, é utilizando a IDE VSCODE com a ex
 
 1. Faça um clone do repositório
    ```sh
-   git clone git@github.com:GabrielToscanoML/CartaMisteriosa.git
+   git clone git@github.com:GabrielToscanoML/ColorGuess.git
    ```
 2. Entre na pasta clonada
    ```sh
-   cd CartaMisteriosa
+   cd ColorGuess
    ```
 3. Execute o arquivo html utilizando a extensão 'LiveServer'. 
    ```
